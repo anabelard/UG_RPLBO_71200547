@@ -2,8 +2,10 @@ package com.ug5a.soal2;
 
 public class App
 {
+
     public static void infoSepatu(Sepatu shoes){
         System.out.println("-----" + shoes.getMerkModel() + "-----");
+        shoes.setKode("NK0024510");
         System.out.println("Kode: " + shoes.getKode());
         System.out.println("Ukuran: " + shoes.getUkuran());
         System.out.println("Harga: " + shoes.getHarga());

@@ -9,17 +9,28 @@ public class Sepatu {
     private long harga;
     private int stok;
 
+    private int id;
+
     public void setKode(String kode) {
-        this.kode = kode;
+        String s = Integer.toString(this.id);
+        this.kode = kode + s;
+        setNextNum(this.id);
+    }
+
+    public String getKode(){
+        return this.kode;
+    }
+
+    public void setNextNum(int nextNum) {
+        this.nextNum = nextNum+1;
+        this.id = this.nextNum;
     }
 
     public int getNextNum() {
         return nextNum;
     }
 
-    public void setNextNum(int nextNum) {
-        this.nextNum = nextNum;
-    }
+
 
     public void setMerkModel(String merkModel) {
         this.merkModel = merkModel;
@@ -44,9 +55,6 @@ public class Sepatu {
         setStok(argStok);
     }
 
-    public String getKode(){
-        return this.kode;
-    }
 
     public String getMerkModel(){
         return this.merkModel;
