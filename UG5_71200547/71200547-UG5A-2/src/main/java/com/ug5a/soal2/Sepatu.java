@@ -12,6 +12,7 @@ public class Sepatu {
     private int id;
 
     public void setKode(String kode) {
+        this.id+=1;
         String s = Integer.toString(this.id);
         this.kode = kode + s;
         setNextNum(this.id);

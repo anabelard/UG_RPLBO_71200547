@@ -2,7 +2,6 @@ package com.ug5a.soal2;
 
 public class App
 {
-
     public static void infoSepatu(Sepatu shoes){
         System.out.println("-----" + shoes.getMerkModel() + "-----");
         shoes.setKode("NK0024510");
