@@ -39,7 +39,9 @@ public class VendingMachines {
     }
 
     public double withdrawMoney(){
-        return consumerMoney;
+        double x = consumerMoney;
+        consumerMoney = 0;
+        return x;
     }
 
     public void inputGoods(Goods good){
