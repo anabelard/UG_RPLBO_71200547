@@ -39,7 +39,7 @@ public class eWallet{
 
 
     public void getInfo(){
-        System.out.println(this.user.getNama());
+        System.out.println(this.user.getNama()+"[PIN: "+this.user.getPIN()+"]");
         System.out.println(this.user.getEmail());
         System.out.println(this.user.getUang());
         System.out.println(this.saldo);
