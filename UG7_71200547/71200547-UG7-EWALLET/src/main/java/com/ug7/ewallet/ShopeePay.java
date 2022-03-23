@@ -23,6 +23,7 @@ public class ShopeePay extends eWallet{
             System.out.println("Maaf, saldo kamu tidak mencukupi! ("+(this.getSaldo()-jumlah) + ")");
         } else {
             super.transfer(eWallet, jumlah);
+            System.out.println("Transfer "+jumlah+" berhasil!");
         }
     }
 
