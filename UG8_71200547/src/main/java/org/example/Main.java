@@ -12,14 +12,12 @@ public class Main {
         dragonKnight.attack(lina);
         dragonKnight.attack(lina);
         legionCommander.skill(lina);
+        lina.skill(legionCommander);
 
         lina.showCharacterInfo();
         System.out.println("");
-        lina.skill(legionCommander);
-
         dragonKnight.showCharacterInfo();
         System.out.println("");
-
         legionCommander.showCharacterInfo();
     }
 
