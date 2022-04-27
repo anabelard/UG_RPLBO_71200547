@@ -18,7 +18,7 @@ public class MobileWallet extends DigitalPayment{
     }
 
     public void transfer(DigitalPayment dp, long nominal){
-        if(this.getSaldo()<0){
+        if(nominal<0){
             System.out.println("Transfer gagal, input tidak valid");
         }
         else if(this.getSaldo()<nominal){
@@ -27,8 +27,14 @@ public class MobileWallet extends DigitalPayment{
         else if(dp instanceof BNImo || dp instanceof BRImo){
                 this.setSaldo(getSaldo()-(nominal+feeTransferBank));
                 dp.setSaldo(getSaldo()+nominal);
-                printBuktiTransfer(dp, nominal);
+                this.printBuktiTransfer(dp, nominal);
             }
+        else{
+            this.setSaldo(getSaldo()-(nominal));
+            dp.setSaldo(getSaldo()+nominal);
+            this.printBuktiTransfer(dp, nominal);
+
+        }
         }
 
 

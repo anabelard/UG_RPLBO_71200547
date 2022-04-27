@@ -15,7 +15,7 @@ public class MobileBanking extends DigitalPayment{
     }
 
     public void transfer(DigitalPayment dp, long nominal){
-        if(this.getSaldo()<0){
+        if(nominal<0){
             System.out.println("Transfer gagal, input tidak valid");
         }
         else if(this.getSaldo()<nominal){
@@ -24,8 +24,14 @@ public class MobileBanking extends DigitalPayment{
         else if(this.isCheckFee()){
                 this.setSaldo(getSaldo()-(nominal+feeAntarBank));
                 dp.setSaldo(getSaldo()+nominal);
-                printBuktiTransfer(dp, nominal);
+                this.printBuktiTransfer(dp, nominal);
             }
+        else {
+            this.setSaldo(getSaldo()-(nominal));
+            dp.setSaldo(getSaldo()+nominal);
+            this.printBuktiTransfer(dp, nominal);
+        }
+
     }
 
     public boolean isCheckFee(){

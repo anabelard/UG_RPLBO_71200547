@@ -10,5 +10,8 @@ public class BNImo extends MobileBanking{
             super.setCheckFee(true);
             super.transfer(dp, nominal);
         }
+        else{
+            super.transfer(dp, nominal);
+        }
     }
 }

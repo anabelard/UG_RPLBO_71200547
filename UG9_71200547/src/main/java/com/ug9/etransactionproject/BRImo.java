@@ -10,6 +10,9 @@ public class BRImo extends MobileBanking{
             super.setCheckFee(true);
             super.transfer(dp, nominal);
         }
+        else{
+            super.transfer(dp, nominal);
+        }
     }
 
 }
