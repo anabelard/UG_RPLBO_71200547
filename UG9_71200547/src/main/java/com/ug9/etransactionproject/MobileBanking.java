@@ -18,19 +18,14 @@ public class MobileBanking extends DigitalPayment{
         if(this.getSaldo()<0){
             System.out.println("Transfer gagal, input tidak valid");
         }
-        else{
-            if(this.getSaldo()<nominal){
+        else if(this.getSaldo()<nominal){
                 System.out.println("Transfer gagal, saldo anda tidak mencukupi");
             }
-            else{
-                if(this.checkFee){
-                    this.setSaldo(getSaldo()-(nominal+feeAntarBank));
-                    dp.setSaldo(getSaldo()+nominal);
-                    printBuktiTransfer(dp, nominal);
-                }
+        else if(this.isCheckFee()){
+                this.setSaldo(getSaldo()-(nominal+feeAntarBank));
+                dp.setSaldo(getSaldo()+nominal);
+                printBuktiTransfer(dp, nominal);
             }
-        }
-
     }
 
     public boolean isCheckFee(){
@@ -38,7 +33,7 @@ public class MobileBanking extends DigitalPayment{
     }
 
     public void setCheckFee(boolean checkFee){
-        this.checkFee=true;
+        this.checkFee=checkFee;
     }
 
 }

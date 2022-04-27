@@ -8,7 +8,7 @@ public class Ovo extends MobileWallet{
     }
 
     public void transfer(DigitalPayment dp, long nominal){
-        this.setFeeTransferBank(ovoFeeTransferBank);
+        this.setFeeTransferBank(this.ovoFeeTransferBank);
         if(dp instanceof Dana){
             System.out.println("Transfer gagal, akun OVO tidak valid");
         }

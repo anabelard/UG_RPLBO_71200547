@@ -8,7 +8,7 @@ public class Dana extends MobileWallet{
     }
 
     public void transfer(DigitalPayment dp, long nominal){
-        this.setFeeTransferBank(danaFeeTransferBank);
+        this.setFeeTransferBank(this.danaFeeTransferBank);
         if(dp instanceof Ovo){
             System.out.println("Transfer gagal, akun DANA tidak valid");
         }

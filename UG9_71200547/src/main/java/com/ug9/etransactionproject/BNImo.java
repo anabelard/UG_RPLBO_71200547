@@ -7,7 +7,7 @@ public class BNImo extends MobileBanking{
 
     public void transfer(DigitalPayment dp, long nominal){
         if(dp instanceof BRImo){
-            super.isCheckFee();
+            super.setCheckFee(true);
             super.transfer(dp, nominal);
         }
     }

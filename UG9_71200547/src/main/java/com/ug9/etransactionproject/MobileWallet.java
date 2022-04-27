@@ -21,17 +21,15 @@ public class MobileWallet extends DigitalPayment{
         if(this.getSaldo()<0){
             System.out.println("Transfer gagal, input tidak valid");
         }
-        else{
-            if(this.getSaldo()<nominal){
+        else if(this.getSaldo()<nominal){
                 System.out.println("Transfer gagal, saldo anda tidak mencukupi");
             }
-            else{
-                if(dp instanceof BNImo || dp instanceof BRImo){
-                    this.setSaldo(getSaldo()-(nominal+feeTransferBank));
-                    dp.setSaldo(getSaldo()+nominal);
-                    printBuktiTransfer(dp, nominal);
-                }
+        else if(dp instanceof BNImo || dp instanceof BRImo){
+                this.setSaldo(getSaldo()-(nominal+feeTransferBank));
+                dp.setSaldo(getSaldo()+nominal);
+                printBuktiTransfer(dp, nominal);
             }
         }
-    }
+
+
 }
