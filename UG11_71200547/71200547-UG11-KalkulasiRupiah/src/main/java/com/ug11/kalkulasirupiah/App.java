@@ -20,16 +20,26 @@ public class App
         String[] kata = text.split("\\s+");
 
         String harga = "";
+        String baru = "";
 
-        List<String> angka = new ArrayList();
+
         for(int i = 0; i < kata.length; i++){
             if(Pattern.matches("Rp\\d+\\W\\d+,00", kata[i])){
-                harga = ""
-                angka.add()
-            }
+//                String[] angka = kata[i].split("\\D");
+//                for(int j = 0; j < angka.length; j++){
+//                    baru+=angka[j];
+//                    System.out.println(baru);
+//                }
+                harga+=kata[i]+" ";
+//                System.out.println(kata[i]);
+                String[] harga2 = harga.split(" ");
+
+                
+                }
         }
 
-        System.out.print("Rincian biaya: ");
+        System.out.println("Rincian biaya: "+harga);
+        System.out.println("Total: ");
 
     }
 }
