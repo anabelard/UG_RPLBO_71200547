@@ -34,7 +34,7 @@ public class App
 //                System.out.println(kata[i]);
                 String[] harga2 = harga.split(" ");
 
-                
+
                 }
         }
 
