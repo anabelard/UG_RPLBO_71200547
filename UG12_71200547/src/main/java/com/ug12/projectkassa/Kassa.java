@@ -58,9 +58,10 @@ public class Kassa {
     public void printPenjualanKasir(){
         int a = 1;
         System.out.println("Daftar Kasir:");
-        System.out.println("No.  Nama         Total Penjualan");
+        System.out.println("No.  Nama              Total Penjualan");
         for (int i=0; i<arrKasir.size(); i++) {
-            System.out.println(a+"  "+ arrKasir.get(i).getNama()+"     Rp"+arrKasir.get(i).getTotalPenjualan());
+            System.out.println(a+".  "+ arrKasir.get(i).getNama()+"      Rp"+arrKasir.get(i).getTotalPenjualan());
+            a++;
         }
 
     }
