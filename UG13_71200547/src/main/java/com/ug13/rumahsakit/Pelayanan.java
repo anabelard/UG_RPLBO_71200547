@@ -11,7 +11,10 @@ public class Pelayanan {
     }
 
     public void mengaturJadwal(Pasien pasien, Dokter dokter, Jadwal jadwal){
-
+        jadwal.setPasien(pasien);
+        jadwal.setDokter(dokter);
+        jadwal.setStatusDaftar(true);
+        System.out.println("==========PROSES PENGATURAN JADWAL BERHASIL==========");
     }
 
     public Pasien registrasi(){

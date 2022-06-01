@@ -12,8 +12,9 @@ public class Suster {
             System.out.println("==========ANDA HARUS MELAKUKAN PROSES PENDAFTARAN TERLEBIH DAHULU DI BAGIAN PELAYANAN==========");
         }
         else{
-            jadwal.setStatusDaftar(true);
             jadwal.setStatusScreening(true);
+            System.out.println("==========PROSES REGISTRASI BERHASIL==========");
+
         }
     }
 
