@@ -13,7 +13,6 @@ public class Suster {
         }
         else{
             jadwal.setStatusScreening(true);
-            System.out.println("==========PROSES REGISTRASI BERHASIL==========");
 
         }
     }
