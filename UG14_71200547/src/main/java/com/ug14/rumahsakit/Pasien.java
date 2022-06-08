@@ -15,7 +15,8 @@ public class Pasien {
         this.alamat = alamat;
     }
 
-    public Pasien(String nama, int usia, String alamat, String penyakit){
+    public Pasien(int rm, String nama, int usia, String alamat, String penyakit){
+        this.rm = rm;
         this.nama = nama;
         this.usia = usia;
         this.alamat = alamat;

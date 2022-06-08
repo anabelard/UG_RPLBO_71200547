@@ -30,6 +30,6 @@ public class App {
         }
         System.out.println("===========================================PROSES PEMERIKSAAN DOKTER BERHASIL============================================");
         System.out.println();
-        DAO.getPasienSembuh();
+//        DAO.getPasienSembuh();
     }
 }
