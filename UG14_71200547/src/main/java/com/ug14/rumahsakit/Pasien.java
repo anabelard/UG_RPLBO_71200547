@@ -21,6 +21,7 @@ public class Pasien {
         this.usia = usia;
         this.alamat = alamat;
         this.penyakit = penyakit;
+
     }
 
     public void setLevelPenyakit(int levelPenyakit){
