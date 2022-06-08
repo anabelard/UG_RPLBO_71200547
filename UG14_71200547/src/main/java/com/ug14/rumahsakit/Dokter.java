@@ -1,7 +1,7 @@
 package com.ug14.rumahsakit;
 
 public class Dokter {
-    private int idDokter;
+    private static int idDokter = 0;
     private String nama;
     private String spesialis;
     private String ruangan;
@@ -28,7 +28,7 @@ public class Dokter {
 
     }
 
-    public void cekStatus(Pasien pasien, Jadwal jadwal){
+    public void cekStatus(Pasien pasien){
         if(!pasien.getStatus()){
             System.out.println("==========PASIEN ANDA MASIH SAKIT==========");
         }

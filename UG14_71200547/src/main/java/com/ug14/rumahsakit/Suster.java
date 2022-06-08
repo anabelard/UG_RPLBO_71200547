@@ -1,7 +1,7 @@
 package com.ug14.rumahsakit;
 
 public class Suster {
-    private int idSuster;
+    private static int idSuster = 0;
     private String nama;
 
     public Suster(String nama){

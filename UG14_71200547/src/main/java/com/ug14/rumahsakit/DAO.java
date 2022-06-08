@@ -25,7 +25,7 @@ public class DAO {
 //    public void getPasienSembuh(){
 //
 //    }
-
+//
 //    public void updateStatusPasien(){
 //
 //    }

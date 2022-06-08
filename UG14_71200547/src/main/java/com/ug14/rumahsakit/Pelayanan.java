@@ -3,7 +3,7 @@ package com.ug14.rumahsakit;
 import java.util.Scanner;
 
 public class Pelayanan {
-    private int idPelayanan;
+    private static int idPelayanan = 0;
     private String nama;
 
     public Pelayanan(String nama){
@@ -48,6 +48,8 @@ public class Pelayanan {
         System.out.println();
         System.out.println("==========PROSES REGISTRASI BERHASIL==========");
 
+
+        
 
         return new Pasien(RM, Nama, Usia, Alamat, Penyakit);
 

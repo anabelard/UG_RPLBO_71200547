@@ -26,7 +26,7 @@ public class App {
         int x = pasien.getLevelPenyakit();
         for(int i = 0; i <= x; i++) {
             dokter.memeriksa(pasien, jadwal);
-            dokter.cekStatus(pasien, jadwal);
+            dokter.cekStatus(pasien);
         }
         System.out.println("===========================================PROSES PEMERIKSAAN DOKTER BERHASIL============================================");
         System.out.println();

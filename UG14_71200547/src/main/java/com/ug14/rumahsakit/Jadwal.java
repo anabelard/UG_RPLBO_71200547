@@ -1,13 +1,13 @@
 package com.ug14.rumahsakit;
 
 public class Jadwal {
-    private int idPemeriksaan;
+    private static int idPemeriksaan = 0;
     private Pasien pasien;
     private Dokter dokter;
     private Suster suster;
     private Pelayanan pelayanan;
-    private boolean statusDaftar;
-    private boolean statusScreening;
+    private boolean statusDaftar = false;
+    private boolean statusScreening = false;
 
     public void setPasien(Pasien pasien) {
         this.pasien = pasien;
@@ -49,8 +49,6 @@ public class Jadwal {
     public boolean getStatusScreening() {
         return this.statusScreening;
     }
-
-
 
     public void setStatusDaftar(boolean statusDaftar) {
         this.statusDaftar = statusDaftar;
