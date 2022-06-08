@@ -91,7 +91,7 @@ public class Pelayanan {
             System.out.println(e.getMessage());
         }
 
-        String sql1 = "CREATE TABLE IF NOT EXISTS pasien (rm int(8) PRIMARY KEY, nama varchar(100) NOT NULL, usia int(3) NOT NULL, alamat varchar(100) NOT NULL);";
+        String sql1 = "CREATE TABLE IF NOT EXISTS pasien (rm int(8) PRIMARY KEY, nama varchar(100), usia int(3), alamat varchar(100));";
         String sql2 = "INSERT INTO pasien (rm, nama, usia, alamat) VALUES ("+RM+","+Nama+","+Usia+","+Alamat+");";
         try(Connection conn3 = DriverManager.getConnection(url); Statement statement = conn.createStatement()){
             statement.execute(sql1);
