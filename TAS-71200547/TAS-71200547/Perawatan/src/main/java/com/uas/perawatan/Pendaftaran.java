@@ -1,14 +1,10 @@
 package com.uas.perawatan;
 
-import java.sql.*;
 import java.util.Scanner;
 
 public class Pendaftaran {
     private int idPendaftaran;
     private String nama;
-
-    private String url = "jdbc:sqlite:rumahsakit.db";
-
 
     public Pendaftaran(int idPendaftaran, String nama){
         this.idPendaftaran = idPendaftaran;
@@ -20,8 +16,8 @@ public class Pendaftaran {
         daftar.setPemeriksa(pemeriksa);
         daftar.setPerawat(perawat);
         daftar.setStatusDaftar(true);
-
-        System.out.println("==========PROSES PENGATURAN JADWAL BERHASIL==========");
+        System.out.println("Data Daftar Berhasil Disimpan!");
+        System.out.println("==========Proses Pengaturan Daftar Berhasil==========");
     }
 
     public Pengunjung registrasi(){
@@ -52,56 +48,6 @@ public class Pendaftaran {
         String penyakitt = penyakit.nextLine();
         String Penyakit = new String(String.valueOf(penyakitt));
         System.out.println();
-        System.out.println("==========PROSES REGISTRASI BERHASIL==========");
-
-
-
-
-
-
-//        Connection conn = null;
-//        try{
-//            conn = DriverManager.getConnection(url);
-//        }
-//        catch (SQLException e){
-//            System.out.println(e.getMessage());
-//        }
-//        finally {
-//            try{
-//                if(conn!=null){
-//                    conn.close();
-//                }
-//            }
-//            catch (SQLException ex){
-//                System.out.println(ex.getMessage());
-//            }
-//        }
-//
-//        try(Connection conn2 = DriverManager.getConnection(url)){
-//            if(conn2!=null){
-//                DatabaseMetaData meta = conn2.getMetaData();
-//            }
-//        }
-//        catch (SQLException e){
-//            System.out.println(e.getMessage());
-//        }
-//
-//        String sql1 = "CREATE TABLE IF NOT EXISTS pasien (rm int(8) PRIMARY KEY, nama varchar(100), usia int(3), alamat varchar(100));";
-//        String sql2 = "INSERT INTO pasien (rm, nama, usia, alamat) VALUES ("+RM+","+Nama+","+Usia+","+Alamat+");";
-//        try(Connection conn3 = DriverManager.getConnection(url); Statement statement = conn.createStatement()){
-//            statement.execute(sql1);
-//            statement.execute(sql2);
-//        }
-//        catch (SQLException e){
-//            System.out.println(e.getMessage());
-//        }
-
-
-
-
-
-
-
 
 
         return new Pengunjung(RM, Nama, Usia, Alamat, Penyakit);

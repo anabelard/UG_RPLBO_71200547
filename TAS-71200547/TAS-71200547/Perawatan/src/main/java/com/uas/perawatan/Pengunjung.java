@@ -21,7 +21,8 @@ public class Pengunjung {
         this.usia = usia;
         this.alamat = alamat;
         this.penyakit = penyakit;
-
+        System.out.println("Data Pengunjung Berhasil Disimpan!");
+        System.out.println("==========Proses Registrasi Berhasil==========");
     }
 
     public void setLevelPenyakit(int levelPenyakit){

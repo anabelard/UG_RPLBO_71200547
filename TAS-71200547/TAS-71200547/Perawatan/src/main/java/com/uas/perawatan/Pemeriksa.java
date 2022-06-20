@@ -21,6 +21,7 @@ public class Pemeriksa {
             }
             else{
                 pengunjung.setStatus(true);
+                System.out.println("Status Pengunjung Berhasil Diubah!");
             }
         }
         else{
@@ -35,6 +36,7 @@ public class Pemeriksa {
         }
         else{
             System.out.println("==========SELAMAT PASIEN ANDA SUDAH SEMBUH DAN SEHAT==========");
+            System.out.println("Status Pengunjung Berhasil Diubah!");
         }
     }
 
