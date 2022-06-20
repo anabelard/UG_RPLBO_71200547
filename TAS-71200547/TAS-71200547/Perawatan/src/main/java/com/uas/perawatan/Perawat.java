@@ -1,6 +1,7 @@
 package com.uas.perawatan;
 
 public class Perawat {
+
     private int idPerawat;
     private String nama;
 
@@ -17,6 +18,14 @@ public class Perawat {
             daftar.setStatusScreening(true);
 
         }
+    }
+
+    public int getIdPerawat() {
+        return idPerawat;
+    }
+
+    public String getNama() {
+        return nama;
     }
 
 }

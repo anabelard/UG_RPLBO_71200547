@@ -1,4 +1,5 @@
 package com.uas.perawatan;
+import java.sql.*;
 
 public class Pengunjung {
     private int rm;
@@ -15,13 +16,14 @@ public class Pengunjung {
         this.alamat = alamat;
     }
 
-    public Pengunjung(int rm, String nama, int usia, String alamat, String penyakit){
+    public Pengunjung(int rm, String nama, int usia, String alamat, String penyakit) throws SQLException {
         this.rm = rm;
         this.nama = nama;
         this.usia = usia;
         this.alamat = alamat;
         this.penyakit = penyakit;
         System.out.println("Data Pengunjung Berhasil Disimpan!");
+//        DAO.inputPengunjung(this);
         System.out.println("==========Proses Registrasi Berhasil==========");
     }
 
@@ -45,6 +47,25 @@ public class Pengunjung {
         return this.penyakit;
     }
 
+    public int getRm() {
+        return rm;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public int getUsia() {
+        return usia;
+    }
+
+    public String getAlamat() {
+        return alamat;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
 
 
 }

@@ -1,6 +1,7 @@
 package com.uas.perawatan;
 
 public class Pemeriksa {
+
     private int idPemeriksa;
     private String nama;
     private String spesialis;
@@ -38,6 +39,22 @@ public class Pemeriksa {
             System.out.println("==========SELAMAT PASIEN ANDA SUDAH SEMBUH DAN SEHAT==========");
             System.out.println("Status Pengunjung Berhasil Diubah!");
         }
+    }
+
+    public int getIdPemeriksa() {
+        return idPemeriksa;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public String getSpesialis() {
+        return spesialis;
+    }
+
+    public String getRuangan() {
+        return ruangan;
     }
 
 }

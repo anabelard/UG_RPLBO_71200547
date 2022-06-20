@@ -1,5 +1,6 @@
 package com.uas.perawatan;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Pendaftaran {
@@ -11,16 +12,17 @@ public class Pendaftaran {
         this.nama = nama;
     }
 
-    public void mengaturDaftar(Pengunjung pengunjung, Pemeriksa pemeriksa, Perawat perawat, Daftar daftar){
+    public void mengaturDaftar(Pengunjung pengunjung, Pemeriksa pemeriksa, Perawat perawat, Daftar daftar) throws SQLException {
         daftar.setPengunjung(pengunjung);
         daftar.setPemeriksa(pemeriksa);
         daftar.setPerawat(perawat);
         daftar.setStatusDaftar(true);
         System.out.println("Data Daftar Berhasil Disimpan!");
+//        DAO.inputDaftar(daftar);
         System.out.println("==========Proses Pengaturan Daftar Berhasil==========");
     }
 
-    public Pengunjung registrasi(){
+    public Pengunjung registrasi() throws SQLException {
         Scanner rm = new Scanner(System.in);
         System.out.print("Masukkan rm baru : ");
         String rmm = rm.nextLine();
@@ -53,5 +55,14 @@ public class Pendaftaran {
         return new Pengunjung(RM, Nama, Usia, Alamat, Penyakit);
 
     }
+
+    public int getIdPendaftaran() {
+        return idPendaftaran;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
 
 }

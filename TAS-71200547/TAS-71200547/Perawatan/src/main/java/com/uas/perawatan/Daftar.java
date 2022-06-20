@@ -1,7 +1,7 @@
 package com.uas.perawatan;
 
 public class Daftar {
-    private static int idPemeriksaan = 0;
+    private int idPemeriksaan;
     private Pengunjung pengunjung;
     private Pemeriksa pemeriksa;
     private Perawat perawat;
